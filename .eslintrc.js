@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     commonjs: true,
     es2021: true,
+    node: true,
   },
   extends: [
     'airbnb-base',
@@ -17,6 +18,8 @@ module.exports = {
   rules: {
     'linebreak-style': 0,
     'no-extra-semi': 0,
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['warn'],
   },
   settings: {
     'import/resolver': {
@@ -25,9 +28,8 @@ module.exports = {
           ['@', './'],
           ['@src', './src'],
           ['@controller', './src/controller'],
-          ['@entity', './src/entity'],
-          ['@mapper', './src/mapper'],
-          ['@service', './src/service'],
+          ['@instance', './src/instance'],
+          ['@model', './src/model'],
           ['@util', './src/util'],
         ],
         extensions: ['.tsx', '.ts', '.jsx', '.js'],

@@ -1,8 +1,8 @@
 import 'module-alias/register';
 import Koa from 'koa';
-import router from '@util/Router';
+import router from '@instance/router';
 import config from '@src/config/config';
-import '@controller/GameDetailController';
+import '@controller/GameInfoController';
 
 const app = new Koa();
 

@@ -11,11 +11,7 @@ export default class Result {
     this.msg = msg;
   }
 
-  public getObject() {
-    return {
-      code: this.code,
-      data: this.data,
-      msg: this.msg,
-    };
+  public static success(data: object) {
+    return new Result(0, data, 'success');
   }
-};
+}
