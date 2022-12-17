@@ -32,16 +32,14 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.26.0",
     "nodemon": "^2.0.16",
-    "typescript": "^4.9.4",
-    "typescript-eslint-parser": "^22.0.0"
+    "typescript": "^4.9.4"
   },
   "_moduleAliases": {
     "@": "dist/src",
     "@src": "dist/src",
     "@controller": "dist/src/controller",
-    "@entity": "dist/src/entity",
-    "@mapper": "dist/src/mapper",
-    "@service": "dist/src/service",
+    "@instance": "dist/src/instance",
+    "@model": "dist/src/model",
     "@util": "dist/src/util"
   }
 }
