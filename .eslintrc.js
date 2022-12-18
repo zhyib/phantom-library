@@ -4,20 +4,24 @@ module.exports = {
     commonjs: true,
     es2021: true,
     node: true,
+    'vue/setup-compiler-macros': true,
   },
   extends: [
     'airbnb-base',
+    'plugin:vue/vue3-essential',
+    '@vue/airbnb',
+    '@vue/typescript/recommended',
   ],
-  parser: '@typescript-eslint/parser',
+  // parser: ['vue-eslint-parser'],
   parserOptions: {
     ecmaVersion: 'latest',
   },
   plugins: [
     '@typescript-eslint',
+    'vue',
   ],
   rules: {
     'linebreak-style': 0,
-    'no-extra-semi': 0,
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['warn'],
   },
@@ -25,12 +29,11 @@ module.exports = {
     'import/resolver': {
       alias: {
         map: [
-          ['@', './backend/'],
-          ['@src', './backend/src'],
-          ['@controller', './backend/src/controller'],
-          ['@instance', './backend/src/instance'],
-          ['@model', './backend/src/model'],
-          ['@util', './backend/src/util'],
+          ['@src', './nodejs/src'],
+          ['@controller', './nodejs/src/controller'],
+          ['@instance', './nodejs/src/instance'],
+          ['@model', './nodejs/src/model'],
+          ['@util', './nodejs/src/util'],
         ],
         extensions: ['.tsx', '.ts', '.jsx', '.js'],
       },
