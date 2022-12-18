@@ -1,8 +1,7 @@
 {
-  "name": "phantom-backend",
-  "version": "1.0.0",
-  "description": "project phantom backend",
-  "main": "index.js",
+  "name": "phantom-libraby",
+  "version": "0.0.1",
+  "description": "project phantom",
   "scripts": {
     "dev:app": "uni -p app",
     "dev:app-android": "uni -p app-android",
