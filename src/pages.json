@@ -6,6 +6,12 @@
       "style": {
         "navigationBarTitleText": "uni-app"
       }
+    },
+    {
+      "path": "pages/AboutPage",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
     }
   ],
   "globalStyle": {
@@ -13,21 +19,25 @@
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "height": "50px",
+    "fontSize": "10px",
+    "iconWidth": "24px",
+    "spacing": "3px",
+    "list": [
+      {
+        "pagePath": "pages/HomePage",
+        "text": "组件"
+      },
+      {
+        "pagePath": "pages/AboutPage",
+        "text": "关于"
+      }
+    ]
   }
-  // "tabBar": {
-  //   "color": "#7A7E83",
-  //   "selectedColor": "#3cc51f",
-  //   "borderStyle": "black",
-  //   "backgroundColor": "#ffffff",
-  //   "height": "50px",
-  //   "fontSize": "10px",
-  //   "iconWidth": "24px",
-  //   "spacing": "3px",
-  //   "list": [
-  //     {
-  //       "pagePath": "pages/HomePage",
-  //       "text": "组件"
-  //     }
-  //   ]
-  // }
 }

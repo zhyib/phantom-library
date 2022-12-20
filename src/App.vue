@@ -1,5 +1,5 @@
 <template>
-  <div>test</div>
+  <div />
 </template>
 <script setup lang="ts">
 import { onLaunch, onShow, onHide } from '@dcloudio/uni-app';
@@ -24,4 +24,6 @@ onHide(() => {
 });
 </script>
 
-<style></style>
+<style>
+
+</style>
