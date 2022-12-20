@@ -13,11 +13,11 @@ service.interceptors.request.use(
 );
 
 service.interceptors.response.use(
-  (response: AxiosResponse<Record<string, string>>) => {
+  (response: AxiosResponse) => {
     const dataAxios = response.data;
     const { code, data, message } = dataAxios;
     switch (code) {
-      case '0':
+      case 0:
         return Promise.resolve(data);
       default:
         return Promise.reject(data);
