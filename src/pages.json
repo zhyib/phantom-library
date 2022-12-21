@@ -4,13 +4,19 @@
     {
       "path": "pages/HomePage",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "Home"
+      }
+    },
+    {
+      "path": "pages/ListPage",
+      "style": {
+        "navigationBarTitleText": "List"
       }
     },
     {
       "path": "pages/AboutPage",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "About"
       }
     }
   ],
@@ -32,7 +38,11 @@
     "list": [
       {
         "pagePath": "pages/HomePage",
-        "text": "组件"
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/ListPage",
+        "text": "列表"
       },
       {
         "pagePath": "pages/AboutPage",

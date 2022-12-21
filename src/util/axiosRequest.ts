@@ -13,7 +13,7 @@ service.interceptors.request.use(
 );
 
 service.interceptors.response.use(
-  (response: AxiosResponse) => {
+  (response: AxiosResponse<Record<string, string>>) => {
     const dataAxios = response.data;
     const { code, data, message } = dataAxios;
     switch (code) {

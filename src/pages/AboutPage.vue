@@ -11,6 +11,7 @@
 import { ref } from 'vue';
 
 const title = ref('About');
+
 </script>
 
 <style>

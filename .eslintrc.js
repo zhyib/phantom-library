@@ -22,7 +22,9 @@ module.exports = {
   ],
   rules: {
     'linebreak-style': 0,
+    'import/extensions': 0,
     'no-unused-vars': 'off',
+    '@typescript-eslint/indent': ['warn', 2],
     '@typescript-eslint/no-unused-vars': ['warn'],
   },
   settings: {
