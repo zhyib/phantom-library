@@ -9,8 +9,36 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types"]
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "types": [
+      "@dcloudio/types",
+      "./src/types"
+    ],
+    "paths": {
+      "@src/*": [
+        "./nodejs/src/*"
+      ],
+      "@controller/*": [
+        "./nodejs/src/controller/*"
+      ],
+      "@instance/*": [
+        "./nodejs/src/instance/*"
+      ],
+      "@model/*": [
+        "./nodejs/src/model/*"
+      ],
+      "@util/*": [
+        "./nodejs/src/util/*"
+      ],
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ]
 }

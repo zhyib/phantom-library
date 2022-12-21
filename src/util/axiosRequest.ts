@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 
 const service = axios.create({
   baseURL: '/api',
@@ -13,14 +13,14 @@ service.interceptors.request.use(
 );
 
 service.interceptors.response.use(
-  (response: AxiosResponse<Record<string, string>>) => {
+  (response) => {
     const dataAxios = response.data;
     const { code, data, message } = dataAxios;
     switch (code) {
       case 0:
         return Promise.resolve(data);
       default:
-        return Promise.reject(data);
+        return Promise.reject(response);
     }
   },
   (error) => {

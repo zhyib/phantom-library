@@ -1,38 +1,31 @@
 <template>
   <view class="content">
-    <el-card class="box-card">
+    <el-card v-for="(item, index) in pageData.gameData" :key="index">
       <template #header>
         <div class="card-header">
-          <span>Card name</span>
-          <el-button class="button" text>Operation button</el-button>
+          <span>{{ item.titleCn ? item.titleCn : item.titleEn }}</span>
+          <el-button class="button" text>{{ item.rate }}</el-button>
         </div>
       </template>
-      <div v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</div>
+      <div>{{ item.platform }}</div>
     </el-card>
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted } from 'vue';
-import axios, { AxiosResponse } from 'axios';
+import { reactive, onMounted } from 'vue';
+import GameInfo from '@model/GameInfo';
 import axiosUtil from '../util/axiosRequest';
-import GameInfo from '../../nodejs/src/model/GameInfo';
 
-const title = ref('About');
 const pageData = reactive<{ gameData: GameInfo[] }>({
   gameData: [],
 });
 
 function queryGameList() {
-  // axios
-  //   .get('/getAll')
-  //   .then((data: AxiosResponse<Record<string, string>, any>) => {
-  //     console.log(data.data);
-  //   });
   axiosUtil
-    .get('/getAll')
+    .get<unknown, GameInfo[]>('/getAll')
     .then((data) => {
-      console.log(data);
+      pageData.gameData = data;
     });
 }
 
