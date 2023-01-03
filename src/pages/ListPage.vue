@@ -1,32 +1,37 @@
 <template>
   <view class="content">
-    <el-card v-for="(item, index) in pageData.gameData" :key="index">
-      <template #header>
-        <div class="card-header">
-          <span>{{ item.titleCn ? item.titleCn : item.titleEn }}</span>
-          <el-button class="button" text>{{ item.rate }}</el-button>
+    <div v-for="(item, index) in pageData.gameData" :key="index" class="card-box">
+      <div class="card-header">
+        <div class="card-header-left">
+          <div class="card-header-title">{{ item.titleCn ? item.titleCn : item.titleEn }}</div>
+          <div class="card-header-subtitle">{{ item.titleCn ? item.titleEn : '' }}</div>
         </div>
-      </template>
+        <div class="card-header-right">
+          <div>{{ item.rate }}</div>
+        </div>
+      </div>
       <div>{{ item.platform }}</div>
-    </el-card>
+    </div>
   </view>
 </template>
 
 <script setup lang="ts">
 import { reactive, onMounted } from 'vue';
 import GameInfo from '@model/GameInfo';
-import axiosUtil from '../util/axiosRequest';
+import uniRequest from '../util/uniRequest';
 
 const pageData = reactive<{ gameData: GameInfo[] }>({
   gameData: [],
 });
 
 function queryGameList() {
-  axiosUtil
-    .get<unknown, GameInfo[]>('/getAll')
-    .then((data) => {
-      pageData.gameData = data;
-    });
+  uniRequest({
+    url: '/api/getAll', // 仅为示例，并非真实接口地址。
+    success: (res) => {
+      const data = res.data as AnyObject;
+      pageData.gameData = data.data;
+    },
+  });
 }
 
 onMounted(queryGameList);
@@ -35,5 +40,23 @@ onMounted(queryGameList);
 <style lang="scss" scoped>
 .content {
   margin: 0 20px;
+}
+
+.card-box {
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+
+  .card-header-title {
+    font-weight: bold;
+  }
+
+  .card-header-subtitle {
+    font-size: 14px;
+  }
 }
 </style>
