@@ -1,3 +1,5 @@
 import Router from 'koa-router';
 
-export default new Router();
+export default new Router({
+  prefix: '/api',
+});

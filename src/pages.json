@@ -4,19 +4,19 @@
     {
       "path": "pages/HomePage",
       "style": {
-        "navigationBarTitleText": "Home"
+        "navigationBarTitleText": "首页"
       }
     },
     {
       "path": "pages/ListPage",
       "style": {
-        "navigationBarTitleText": "List"
+        "navigationBarTitleText": "游戏列表"
       }
     },
     {
       "path": "pages/AboutPage",
       "style": {
-        "navigationBarTitleText": "About"
+        "navigationBarTitleText": "关于"
       }
     }
   ],

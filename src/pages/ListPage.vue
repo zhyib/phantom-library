@@ -26,10 +26,9 @@ const pageData = reactive<{ gameData: GameInfo[] }>({
 
 function queryGameList() {
   uniRequest({
-    url: '/api/getAll', // 仅为示例，并非真实接口地址。
-    success: (res) => {
-      const data = res.data as AnyObject;
-      pageData.gameData = data.data;
+    url: '/api/getAll',
+    success: (res: ResponseBody<GameInfo[]>) => {
+      pageData.gameData = res.data.data;
     },
   });
 }
@@ -43,8 +42,13 @@ onMounted(queryGameList);
 }
 
 .card-box {
+  height: 80px;
   margin: 10px 0;
+  padding: 10px 20px;
   border-radius: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 15px #808080, -5px -5px 15px #ffffff;
 }
 
 .card-header {

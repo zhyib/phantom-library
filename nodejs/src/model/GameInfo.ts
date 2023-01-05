@@ -62,6 +62,11 @@ class GameInfo extends Model {
    * 发行日期
    */
   declare publishDate: Date | null;
+
+  /**
+   * 是否删除
+   */
+  declare isDeleted: boolean;
 }
 
 GameInfo.init({
@@ -102,6 +107,10 @@ GameInfo.init({
   },
   publishDate: {
     type: DataTypes.DATE,
+  },
+  isDeleted: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
   },
 }, { sequelize, timestamps: false });
 
