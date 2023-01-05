@@ -36,7 +36,7 @@
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd nodejs & tsc",
+    "build": "tsc -project nodejs",
     "start": "node ./nodejs/dist/index.js",
     "serve": " nodemon ./nodejs/dist/index.js"
   },
