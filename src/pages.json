@@ -10,7 +10,7 @@
     {
       "path": "pages/ListPage",
       "style": {
-        "navigationBarTitleText": "游戏列表"
+        "navigationBarTitleText": "列表"
       }
     },
     {

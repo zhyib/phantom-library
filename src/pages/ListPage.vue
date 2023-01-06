@@ -1,4 +1,7 @@
 <template>
+  <view class="uni-form-item uni-column">
+    <input class="uni-input" confirm-type="search" placeholder="输入游戏名称" @confirm="handleSearch" />
+  </view>
   <view class="content">
     <div v-for="(item, index) in pageData.gameData" :key="index" class="card-box">
       <div class="card-header">
@@ -27,6 +30,9 @@ const pageData = reactive<{ gameData: GameInfo[] }>({
 function queryGameList() {
   uniRequest({
     url: '/api/getAll',
+    data: {
+      titleEn: '',
+    },
     success: (res: ResponseBody<GameInfo[]>) => {
       pageData.gameData = res.data.data;
     },
@@ -34,6 +40,19 @@ function queryGameList() {
 }
 
 onMounted(queryGameList);
+
+function handleSearch(event: any) {
+  const value = event.detail.value as string;
+  uniRequest({
+    url: '/api/getAll',
+    data: {
+      titleEn: value,
+    },
+    success: (res: ResponseBody<GameInfo[]>) => {
+      pageData.gameData = res.data.data;
+    },
+  });
+}
 </script>
 
 <style lang="scss" scoped>

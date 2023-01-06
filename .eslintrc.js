@@ -21,6 +21,7 @@ module.exports = {
     'vue',
   ],
   rules: {
+    indent: 'off',
     'linebreak-style': 0,
     'import/extensions': 0,
     'no-unused-vars': 'off',
@@ -41,7 +42,7 @@ module.exports = {
       },
     },
   },
-  globals: [
-    ResponseBody,
-  ],
+  globals: {
+    ResponseBody: 'readonly',
+  },
 };

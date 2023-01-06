@@ -38,7 +38,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -project nodejs",
     "start": "node ./nodejs/dist/index.js",
-    "serve": " nodemon ./nodejs/dist/index.js"
+    "serve": "nodemon ./nodejs/dist/index.js"
   },
   "author": "",
   "license": "ISC",
