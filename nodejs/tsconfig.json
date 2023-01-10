@@ -43,6 +43,9 @@
       "@model/*": [
         "./src/model/*"
       ],
+      "@service/*": [
+        "./src/service/*"
+      ],
       "@util/*": [
         "./src/util/*"
       ],

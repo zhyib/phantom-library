@@ -18,20 +18,8 @@
       // "./src/types/*"
     ],
     "paths": {
-      "@src/*": [
-        "./nodejs/src/*"
-      ],
-      "@controller/*": [
-        "./nodejs/src/controller/*"
-      ],
-      "@instance/*": [
-        "./nodejs/src/instance/*"
-      ],
       "@model/*": [
         "./nodejs/src/model/*"
-      ],
-      "@util/*": [
-        "./nodejs/src/util/*"
       ],
     }
   },

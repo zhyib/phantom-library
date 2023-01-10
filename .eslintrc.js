@@ -36,6 +36,7 @@ module.exports = {
           ['@controller', './nodejs/src/controller'],
           ['@instance', './nodejs/src/instance'],
           ['@model', './nodejs/src/model'],
+          ['@service', './nodejs/src/service'],
           ['@util', './nodejs/src/util'],
         ],
         extensions: ['.tsx', '.ts', '.jsx', '.js'],

@@ -99,6 +99,7 @@
     "@controller": "./nodejs/dist/src/controller",
     "@instance": "./nodejs/dist/src/instance",
     "@model": "./nodejs/dist/src/model",
+    "@service": "./nodejs/dist/src/service",
     "@util": "./nodejs/dist/src/util"
   }
 }
